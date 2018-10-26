@@ -45,7 +45,6 @@ public class Radar : MonoBehaviour {
     private void OnTriggerEnter(Collider other)
     {
         Vector3 newpos=((other.transform.position-transform.position)/2000)* radarscreen.width;
-        print(newpos+" "+ other.gameObject.name);
 
         if (new Vector2((int)newpos.x, (int)newpos.z).magnitude > radarscreen.width/2)
         {

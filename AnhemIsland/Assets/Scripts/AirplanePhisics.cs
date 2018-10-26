@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AirplanePhisics : MonoBehaviour {
     public Rigidbody rdb;
@@ -13,7 +14,7 @@ public class AirplanePhisics : MonoBehaviour {
     public float motorPower = 10000;
     public float trotle = 0.1f;
     public float aerodinamic = 0.001f;
-
+    public bool CanWin = false;
     public int hull = 100;
 
 
@@ -36,10 +37,8 @@ public class AirplanePhisics : MonoBehaviour {
         if (hull > 0)
         {
             propeller.transform.Rotate(0, 0, 85 * trotle);
-            profundor.transform.localRotation = Quaternion.Euler(new Vector3(control.x * -15, 0, 0));
-            aileronL.transform.localRotation = Quaternion.Euler(new Vector3(control.z * -15, 0, 0));
-            aileronR.transform.localRotation = Quaternion.Euler(new Vector3(control.z * 15, 0, 0));
         }
+        
         
         
     }
