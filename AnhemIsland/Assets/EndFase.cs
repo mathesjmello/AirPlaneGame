@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Targuets : MonoBehaviour {
+public class EndFase : MonoBehaviour {
+	[SerializeField] private GameObject Painel;
 
 	// Use this for initialization
 	void Start () {
@@ -14,9 +15,8 @@ public class Targuets : MonoBehaviour {
 		
 	}
 
-	private void OnTriggerEnter(Collider other)
+	private void OnDestroy()
 	{
-		if(other.CompareTag("Player"))
-			gameObject.SetActive(false);
+		Painel.SetActive(true);
 	}
 }

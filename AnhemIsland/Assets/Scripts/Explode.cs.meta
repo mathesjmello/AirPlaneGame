@@ -3,7 +3,10 @@ guid: 58a6935ec8589c84598402ad88ff0ea3
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - explosion: {instanceID: 0}
+  - Painel: {fileID: 1398433926581178, guid: 7e3e06e5a0d2d814ca06cde9c6c5a04c, type: 2}
+  - Player: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

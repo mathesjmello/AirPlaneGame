@@ -13,6 +13,8 @@ public class ResetScene : MonoBehaviour {
 
 	IEnumerator Example()
 	{
+		Debug.LogError("wtf");
+		Debug.Log(this.gameObject.name);
 		yield return new WaitForSeconds(5);
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
